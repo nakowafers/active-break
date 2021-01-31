@@ -1,8 +1,11 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Clock from '../components/Clock'
-
+import {
+    Box,
+    Button,
+    Grid,
+    Heading,
+    Text
+} from 'theme-ui';
 
 const workouts = [
     'Push Ups',
@@ -31,12 +34,23 @@ class Workout extends React.Component {
 
     render() {
         return (
-            <Box component="App">
-                <h1>Active Break</h1>
-                <Clock />
-                <h2>{workouts[this.state.index]}</h2>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>Next</Button>
-            </Box>
+            <Grid>
+                <Heading
+                    as='h1'
+                    bg='gray'
+                    color='primary'>
+                    Active Break
+                </Heading>
+                <Box component="App">
+
+                    <Heading as='h2'
+                    >
+                        {workouts[this.state.index]}
+                    </Heading>
+                    <Button mt={4} variant="primary" onClick={this.handleClick}>Next</Button>
+                </Box >
+            </Grid>
+
         );
     }
 }
