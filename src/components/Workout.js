@@ -1,11 +1,4 @@
 import React from 'react';
-import {
-    Box,
-    Button,
-    Grid,
-    Heading,
-    Text
-} from 'theme-ui';
 
 const workouts = [
     'Push Ups',
@@ -34,22 +27,22 @@ class Workout extends React.Component {
 
     render() {
         return (
-            <Grid>
-                <Heading
+            <div>
+                <h1
                     as='h1'
                     bg='gray'
                     color='primary'>
                     Active Break
-                </Heading>
-                <Box component="App">
+                </h1>
+                <div component="App">
 
-                    <Heading as='h2'
+                    <h2 as='h2'
                     >
                         {workouts[this.state.index]}
-                    </Heading>
-                    <Button mt={4} variant="primary" onClick={this.handleClick}>Next</Button>
-                </Box >
-            </Grid>
+                    </h2>
+                    <button mt={4} variant="primary" onClick={this.handleClick}>Next</button>
+                </div >
+            </div>
 
         );
     }
