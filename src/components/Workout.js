@@ -27,22 +27,14 @@ class Workout extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1
-                    as='h1'
-                    bg='gray'
-                    color='primary'>
-                    Active Break
-                </h1>
-                <div component="App">
+            <div className="card">
+                <h2>Active Break</h2>
+                <p className="exercise">
+                    {workouts[this.state.index]}
+                </p>
+                <button onClick={this.handleClick}>Next</button>
+            </div >
 
-                    <h2 as='h2'
-                    >
-                        {workouts[this.state.index]}
-                    </h2>
-                    <button mt={4} variant="primary" onClick={this.handleClick}>Next</button>
-                </div >
-            </div>
 
         );
     }
